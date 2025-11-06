@@ -8,9 +8,10 @@ public static void main(String[] args) {
 	int rating = -2;
 	boolean warnhinweis = false;
 	boolean negativ = false;
+	double betragG=Math.abs(guthaben);
 	if (guthaben<0) {
 		negativ = true;
-		if (monEingang >= guthaben) {
+		if (monEingang>=betragG) {
 			rating = rating +1;
 		}else  {//if (monEingang < guthaben)
 			rating = rating -1;
@@ -24,6 +25,6 @@ public static void main(String[] args) {
 	{
 		rating = rating + 2;
 	}
-	//System.out.println("Warnhinweis: "+ warnhinweis + " negativ: "+ negativ + " rating: " + rating);
+	System.out.println("Warnhinweis: "+ warnhinweis + ", Negativ: "+ negativ + ", rating: " + rating);
 }
 }
